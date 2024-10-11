@@ -1,0 +1,94 @@
+.projects{
+    background: var(--bg-color);
+    padding: 1rem;
+}
+
+.portfolio h2{
+    margin-bottom: 2.5rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2.5rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.container .portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img{
+    transform: scale(1.1);
+}
+
+.container .layer {
+    flex: 1 1 calc(33.33% - 20px);
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.container .layer img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2rem;
+}
+
+.portfolio-box:hover .layer{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.container .layer:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+
+.container .layer h4{
+    font-size: 2rem;
+    margin-bottom: 1rem
+}
+
+.container .layer p {
+    font-size: 1.rem;
+    margin: 1rem 0;
+}
+
+.container .layer a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--main-color);
+    border-radius: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.container .layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+.container .layer a:hover {
+    background: #fff;
+    color: var(--main-color);
+}
